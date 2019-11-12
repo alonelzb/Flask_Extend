@@ -25,6 +25,7 @@ ALLOWED_EXTEN = {'txt', 'jpg', 'png', 'jpeg', 'mp4', 'py', 'gz', 'pdf'}
 def index():
     return render_template('upload.html')
 
+# 检查文件名是否合法
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTEN
 
